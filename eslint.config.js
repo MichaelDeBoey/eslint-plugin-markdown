@@ -6,6 +6,10 @@ module.exports = [
         files: ["**/*.js"]
     })),
     {
+        ...require("eslint-config-eslint/formatting"),
+        files: ["**/*.js"]
+    },
+    {
         plugins: {
             markdown: require(".")
         }
@@ -41,7 +45,13 @@ module.exports = [
         },
         rules: {
             "lines-around-comment": "off",
-            "n/no-missing-import": "off"
+            "n/no-missing-import": "off",
+            "no-var": "off",
+            "padding-line-between-statements": "off",
+            "no-console": "off",
+            "no-alert": "off",
+            "@eslint-community/eslint-comments/require-description": "off",
+            "jsdoc/require-jsdoc": "off"
         }
     }
 ];
