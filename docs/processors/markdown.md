@@ -112,10 +112,10 @@ Some rules that catch mistakes in regular code are less helpful in documentation
 For example, `no-undef` would flag variables that are declared outside of a code snippet because they aren't relevant to the example.
 The `markdown.configs.processor` config disables these rules in Markdown files:
 
-- [`no-undef`](https://eslint.org/docs/rules/no-undef)
-- [`no-unused-expressions`](https://eslint.org/docs/rules/no-unused-expressions)
-- [`no-unused-vars`](https://eslint.org/docs/rules/no-unused-vars)
-- [`padded-blocks`](https://eslint.org/docs/rules/padded-blocks)
+- [`no-undef`](https://eslint.org/docs/latest/rules/no-undef)
+- [`no-unused-expressions`](https://eslint.org/docs/latest/rules/no-unused-expressions)
+- [`no-unused-vars`](https://eslint.org/docs/latest/rules/no-unused-vars)
+- [`padded-blocks`](https://eslint.org/docs/latest/rules/padded-blocks)
 
 Use glob patterns to disable more rules just for Markdown code blocks:
 
@@ -179,7 +179,7 @@ eslint --fix .
 
 The processor will convert HTML comments immediately preceding a code block into JavaScript block comments and insert them at the beginning of the source code that it passes to ESLint.
 This permits configuring ESLint via configuration comments while keeping the configuration comments themselves hidden when the markdown is rendered.
-Comment bodies are passed through unmodified, so the plugin supports any [configuration comments](http://eslint.org/docs/user-guide/configuring) supported by ESLint itself.
+Comment bodies are passed through unmodified, so the plugin supports any [configuration comments](https://eslint.org/docs/latest/use/configure) supported by ESLint itself.
 
 This example enables the `alert` global variable, disables the `no-alert` rule, and configures the `quotes` rule to prefer single quotes:
 
